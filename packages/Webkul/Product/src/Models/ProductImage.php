@@ -51,6 +51,7 @@ class ProductImage extends Model implements ProductImageContract
      */
     public function url()
     {
+        return $this->path;
         return Storage::url($this->path);
     }
 

@@ -28,7 +28,7 @@ class ShopifyServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__ . '/../Resources/views', 'shopify');
 
         $this->loadMigrationsFrom(__DIR__ . '/../Database/Migrations');
-        
+
 
         /*
         $this->app->register(EventServiceProvider::class);
@@ -70,11 +70,11 @@ class ShopifyServiceProvider extends ServiceProvider
             'acl'
         );
 
-        
+
         $this->mergeConfigFrom(
             dirname(__DIR__) . '/Config/shopify.php', 'shopify'
         );
-        
+
     }
 
     /**
@@ -117,6 +117,8 @@ class ShopifyServiceProvider extends ServiceProvider
                 \Nicelizhi\Shopify\Console\Commands\Fulfillments\Create::class,
 
                 \Nicelizhi\Shopify\Console\Commands\Transaction\Post::class,
+
+                \Nicelizhi\Shopify\Console\Commands\Order\PostOdoo::class
             ]);
         }
     }

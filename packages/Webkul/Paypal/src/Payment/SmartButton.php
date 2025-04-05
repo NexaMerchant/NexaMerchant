@@ -276,7 +276,7 @@ class SmartButton extends Paypal
     protected function environment()
     {
         $isSandbox = $this->getConfigData('sandbox') ?: false;
-        Log::info("paypal isSandbox " . $isSandbox);
+        //Log::info("paypal isSandbox " . $isSandbox);
         if ($isSandbox) {
             return new SandboxEnvironment($this->clientId, $this->clientSecret);
         }

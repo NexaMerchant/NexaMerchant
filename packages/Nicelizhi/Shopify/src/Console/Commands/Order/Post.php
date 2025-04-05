@@ -203,7 +203,9 @@ class Post extends Command
             }
             
             $variant_id = $sku['selected_configurable_option'];
-            if(isset($sku['product_sku'])) {
+            //var_dump($variant_id);
+            // check the product_sku have "-"
+            if(isset($sku['product_sku']) && strpos($sku['product_sku'], '-')!==false) {
                 $skuInfo = explode('-', $sku['product_sku']);
                 if(!isset($skuInfo[1])) {
                     $this->error("have error" . $id);

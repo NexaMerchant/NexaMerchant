@@ -220,11 +220,7 @@ class Create extends Command
         $billing_address = $order->billing_address;
         $postOrder['line_items'] = $line_items;
 
-        $shipping_address->email = "nice.lizhi@gmail.com";
-        $shipping_address->first_name = "测试订单";
-        $billing_address->first_name = "测试订单";
-        $shipping_address->last_name = "不用发货";
-        $billing_address->last_name = "不用发货";
+
 
 
         $customer = [];
